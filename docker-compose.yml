@@ -1,0 +1,14 @@
+version: "3.0"
+
+services:
+
+  db:
+    image: mariadb:latest
+    ports:
+     - 3306:3306
+    volumes:
+     - data-mariadb:/var/lib/mysql
+    env_file: docker/dev.env
+
+volumes:
+  data-mariadb:
